@@ -21,8 +21,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} h-full antialiased`}>
-      <Navbar></Navbar>
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <header>
+          <Navbar></Navbar>
+        </header>
+        <main className="grow">{children}</main>
+      </body>
     </html>
   );
 }
